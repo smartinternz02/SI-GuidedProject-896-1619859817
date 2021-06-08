@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../static/css/main.css">
+</head>
+<body>
+	<nav class="navbar">
+		<ul>
+			<li><a href="#home">Home</a></li>
+			<li><a href="#info">Info</a></li>
+			<li><a href="#predict">Predict</a></li>
+		</ul>
+	</nav>
+	<div class="heart-img"><img src="../static/heart.png" height="30px" width="30px"></div>
+
+	<section id="home"  class="home sec">
+		<h1 class="head">ECG arrhythmia classification using CNN</h1>
+		<p class="home-text">The classification of electrocardiogram (ECG) signals is very important for the automatic diagnosis of heart disease. Traditionally, it is divided into two steps, including the step of feature extraction and the step of pattern classification. Owing to recent advances in artificial intelligence, it has been demonstrated that deep neural network, which trained on a huge amount of data, can carry out the task of feature extraction directly from the data and recognize cardiac arrhythmias better than professional cardiologists. This paper proposes an ECG arrhythmia classification method using two-dimensional (2D) deep convolutional neural network (CNN).
+		</p>
+	</section>
+
+	<section id="info" class="info sec">
+		<h1 class="head">ECG</h1>
+		<div class="info-sub-con">
+			<p class="info-text">
+				An electrocardiogram records the electrical signals in your heart. It's a common and painless test used to quickly detect heart problems and monitor your heart's health.
+			</p>
+			<img class="ecg-img" src="../static/ecg.png" height="300" width="300">
+		</div>
+	</section>
+
+	<section id="predict" class="predict sec">
+		
+		<h1 class="head">ECG prediction</h1>
+		<div>
+			<form id="upload-file" method="post" enctype="multipart/form-data">
+			<center>    <label for="imageUpload" class="upload-label">
+					Choose...
+				</label>
+				<input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg">
+			</center></form>
+		
+		   <center> <div class="image-section" style="display:none;">
+				<div class="img-preview">
+					<div id="imagePreview">
+					</div></center>
+				</div>
+				<center><div>
+					<button type="button" class="btn btn-primary btn-lg " id="btn-predict">Predict!</button>
+				</div></center>
+			</div>
+			<center>
+			<div class="loader" style="display:none;"></div>
+		
+			<h3 style="color:white" id="result"></center>
+				<span> </span>
+			</h3>
+		
+		</div>
+	</center>
+	</section>
+
+	<script type="text/javascript" src="../static/js/main.js"></script>
+</body>
+</html>
